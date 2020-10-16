@@ -11,6 +11,10 @@ class Artist
     @songs = []
   end
 
+  def self.all
+    @@all
+  end
+
   def self.destroy_all
     all.clear
   end
@@ -31,6 +35,6 @@ class Artist
   end
 
   def genres
-    songs.collect{|save| save.genre}.uniq
+    songs.collect{ |save| save.genre }.uniq
   end
 end
